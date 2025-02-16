@@ -1,6 +1,8 @@
-import Testing
+import XCTest
 @testable import Presentation
 
-@Test func example() async throws {
-    // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+final class PresentationTests: XCTestCase {
+    func testExample() throws {
+        XCTAssertNotNil(ContentView())
+    }
 }

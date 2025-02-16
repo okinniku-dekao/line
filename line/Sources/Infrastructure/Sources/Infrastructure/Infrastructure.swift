@@ -1,5 +1,5 @@
 import Foundation
 
-public struct Domain {
+public struct Infrastructure {
     public init() {}
 }

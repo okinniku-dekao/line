@@ -1,6 +1,8 @@
-import Testing
+import XCTest
 @testable import Domain
 
-@Test func example() async throws {
-    // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+final class DomainTests: XCTestCase {
+    func testExample() throws {
+        XCTAssertNotNil(Domain())
+    }
 }

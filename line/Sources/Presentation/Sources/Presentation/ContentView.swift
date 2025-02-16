@@ -1,25 +1,16 @@
-//
-//  ContentView.swift
-//  line
-//
-//  Created by 東　秀斗 on 2025/02/08.
-//
-
 import SwiftUI
+import Domain
 
 public struct ContentView: View {
     public init() {}
+    
     public var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, Swift Package Project")
-        }
-        .padding()
+        Text("Hello, Clean Architecture!")
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
