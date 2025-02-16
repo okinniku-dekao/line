@@ -21,11 +21,19 @@ rm -f $PROJECT_NAME/${PROJECT_NAME}App.swift
 
 # 基本ディレクトリ構造を作成
 mkdir -p $PROJECT_NAME/{App,Sources,Preview\ Content/Preview\ Assets.xcassets}
-mkdir -p $PROJECT_NAME/Sources/{Domain,Presentation}/{Sources,Tests}
+mkdir -p $PROJECT_NAME/Sources/{Domain,Presentation,Application,Infrastructure}/{Sources,Tests}
+# Domain
 mkdir -p $PROJECT_NAME/Sources/Domain/Sources/Domain
 mkdir -p $PROJECT_NAME/Sources/Domain/Tests/DomainTests
+# Presentation
 mkdir -p $PROJECT_NAME/Sources/Presentation/Sources/Presentation
 mkdir -p $PROJECT_NAME/Sources/Presentation/Tests/PresentationTests
+# Application
+mkdir -p $PROJECT_NAME/Sources/Application/Sources/Application
+mkdir -p $PROJECT_NAME/Sources/Application/Tests/ApplicationTests
+# Infrastructure
+mkdir -p $PROJECT_NAME/Sources/Infrastructure/Sources/Infrastructure
+mkdir -p $PROJECT_NAME/Sources/Infrastructure/Tests/InfrastructureTests
 
 # App/AppNameApp.swiftを作成
 cat > $PROJECT_NAME/App/${PROJECT_NAME}App.swift << EOL
@@ -62,6 +70,49 @@ final class DomainTests: XCTestCase {
     }
 }
 EOL
+
+# Application.swiftを作成
+cat > $PROJECT_NAME/Sources/Application/Sources/Application/Application.swift << EOL
+import Foundation
+
+public struct Application {
+    public init() {}
+}
+EOL
+
+# ApplicationTests.swiftを作成
+cat > $PROJECT_NAME/Sources/Application/Tests/ApplicationTests/ApplicationTests.swift << EOL
+import XCTest
+@testable import Application
+
+final class ApplicationTests: XCTestCase {
+    func testExample() throws {
+        XCTAssertNotNil(Application())
+    }
+}
+EOL
+
+# Infrastructure.swiftを作成
+cat > $PROJECT_NAME/Sources/Infrastructure/Sources/Infrastructure/Infrastructure.swift << EOL
+import Foundation
+
+public struct Infrastructure {
+    public init() {}
+}
+EOL     
+
+# InfrastructureTests.swiftを作成
+cat > $PROJECT_NAME/Sources/Infrastructure/Tests/InfrastructureTests/InfrastructureTests.swift << EOL
+import XCTest
+@testable import Infrastructure
+
+final class InfrastructureTests: XCTestCase {
+    func testExample() throws {
+        XCTAssertNotNil(Infrastructure())
+    }
+}
+EOL
+
 
 # ContentView.swiftを作成
 cat > $PROJECT_NAME/Sources/Presentation/Sources/Presentation/ContentView.swift << EOL
@@ -117,6 +168,64 @@ let package = Package(
             name: "DomainTests",
             dependencies: ["Domain"],
             path: "Tests/DomainTests"
+        )
+    ]
+)
+EOL
+
+# Application Package.swiftを作成
+cat > $PROJECT_NAME/Sources/Application/Package.swift << EOL
+// swift-tools-version:6.0
+import PackageDescription
+
+let package = Package(
+    name: "Application",
+    platforms: [.iOS(.v14)],
+    products: [
+        .library(name: "Application", targets: ["Application"])
+    ],
+    dependencies: [
+        .package(path: "../Domain")
+    ],
+    targets: [
+        .target(
+            name: "Application",    
+            dependencies: ["Domain"],
+            path: "Sources/Application"
+        ),
+        .testTarget(
+            name: "ApplicationTests",
+            dependencies: ["Application"],  
+            path: "Tests/ApplicationTests"
+        )
+    ]
+)
+EOL
+
+# Infrastructure Package.swiftを作成
+cat > $PROJECT_NAME/Sources/Infrastructure/Package.swift << EOL 
+// swift-tools-version:6.0
+import PackageDescription
+
+let package = Package(
+    name: "Infrastructure",
+    platforms: [.iOS(.v14)],    
+    products: [
+        .library(name: "Infrastructure", targets: ["Infrastructure"])
+    ],
+    dependencies: [
+        .package(path: "../Domain")
+    ],  
+    targets: [
+        .target(
+            name: "Infrastructure",
+            dependencies: ["Domain"],
+            path: "Sources/Infrastructure"
+        ),  
+        .testTarget(
+            name: "InfrastructureTests",
+            dependencies: ["Infrastructure"],
+            path: "Tests/InfrastructureTests"
         )
     ]
 )
