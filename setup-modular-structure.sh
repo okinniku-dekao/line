@@ -99,7 +99,7 @@ import Foundation
 public struct Infrastructure {
     public init() {}
 }
-EOL     
+EOL
 
 # InfrastructureTests.swiftを作成
 cat > $PROJECT_NAME/Sources/Infrastructure/Tests/InfrastructureTests/InfrastructureTests.swift << EOL
