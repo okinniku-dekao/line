@@ -5,7 +5,8 @@ func routes(_ app: Application) throws {
     
     // Protected routes
     let protected = app.routes.grouped(User.sessionAuthenticator())
-    protected.get("me") { req -> User in
-        try req.auth.require(User.self)
+    protected.get("me") { req -> UserDTO in
+        let user = try req.auth.require(User.self)
+        return UserDTO(user: user)
     }
 }
