@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:line}/line-server",
+            "name": "Debug App (line-server)",
+            "program": "${workspaceFolder:line}/line-server/.build/debug/App",
+            "preLaunchTask": "swift: Build Debug App (line-server)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:line}/line-server",
+            "name": "Release App (line-server)",
+            "program": "${workspaceFolder:line}/line-server/.build/release/App",
+            "preLaunchTask": "swift: Build Release App (line-server)"
+        }
+    ]
+}
