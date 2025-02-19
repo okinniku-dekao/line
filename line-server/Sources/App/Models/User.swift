@@ -16,7 +16,7 @@ final class User: Model, Content, @unchecked Sendable {
     init(id: UUID? = nil, username: String, passwordHash: String) {
         self.id = id
         self.username = username
-        self.username = passwordHash
+        self.passwordHash = passwordHash
     }
 }
 
