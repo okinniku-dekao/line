@@ -115,6 +115,7 @@
 				864A07BF2D5659E600ECB60E /* Sources */,
 				864A07C02D5659E600ECB60E /* Frameworks */,
 				864A07C12D5659E600ECB60E /* Resources */,
+				868ACC7C2D66D81B00DA2F7F /* Run Script [Vapor] */,
 			);
 			buildRules = (
 			);
@@ -244,6 +245,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		868ACC7C2D66D81B00DA2F7F /* Run Script [Vapor] */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script [Vapor]";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd ../scripts\nbash start_vapor_server.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		864A07BF2D5659E600ECB60E /* Sources */ = {
