@@ -6,38 +6,26 @@ final class User: Model, Content, @unchecked Sendable {
     
     @ID(key: .id)
     var id: UUID?
-    @Field(key: "username")
-    var username: String
-    @Field(key: "password_hash")
+    @Field(key: FieldKeys.email)
+    var email: String
+    @Field(key: FieldKeys.userName)
+    var userName: String
+    @Field(key: FieldKeys.passwordHash)
     var passwordHash: String
+    
     
     init() {}
     
-    init(id: UUID? = nil, username: String, passwordHash: String) {
+    init(id: UUID? = nil, email: String, userName: String, passwordHash: String) {
         self.id = id
-        self.username = username
+        self.email = email
+        self.userName = userName
         self.passwordHash = passwordHash
     }
 }
 
-extension User {
-    struct Create: Content {
-        var username: String
-        var password: String
-        var confirmPassword: String
-    }
-}
-
-extension User.Create: Validatable {
-    static func validations(_ validations: inout Validations) {
-        validations.add("username", as: String.self, is: !.empty)
-        validations.add("password", as: String.self, is: .count(8...))
-    }
-}
-
-
 extension User: ModelAuthenticatable {
-    static let usernameKey: KeyPath<User, Field<String>> = \User.$username
+    static let usernameKey: KeyPath<User, Field<String>> = \User.$email
     static let passwordHashKey: KeyPath<User, Field<String>> = \User.$passwordHash
     
     func verify(password: String) throws -> Bool {
@@ -45,12 +33,12 @@ extension User: ModelAuthenticatable {
     }
     
     static func authenticate(
-        username: String,
+        email: String,
         password: String,
         on db: Database
     ) async throws -> User {
         guard let user = try await User.query(on: db)
-            .filter(\.$username == username)
+            .filter(\.$email == email)
             .first() else {
             throw Abort(.unauthorized, reason: "Invalid credentials")
         }
@@ -68,5 +56,15 @@ extension User: SessionAuthenticatable {
     
     var sessionID: UUID {
         self.id!
+    }
+}
+
+
+// MARK: - Field Keys
+extension User {
+    enum FieldKeys {
+        static let email: FieldKey = { "email" }()
+        static let userName: FieldKey = { "user_name" }()
+        static let passwordHash: FieldKey = { "password_hash" }()
     }
 }
