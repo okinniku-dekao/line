@@ -9,10 +9,10 @@ import Vapor
 
 struct UserDTO: Content {
     let id: UUID
-    let username: String
+    let email: String
     
     init(user: User) {
         self.id = user.id!
-        self.username = user.username
+        self.email = user.email
     }
 }

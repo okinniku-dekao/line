@@ -25,7 +25,8 @@ struct AuthController: RouteCollection {
         }
         
         let user = try User(
-            username: create.username,
+            email: create.email,
+            userName: create.userName,
             passwordHash: Bcrypt.hash(create.password)
         )
         try await user.save(on: req.db)
@@ -40,7 +41,7 @@ struct AuthController: RouteCollection {
     func login(req: Request) async throws -> AuthResponse {
         let loginRequest = try req.content.decode(LoginRequest.self)
         let user = try await User.authenticate(
-            username: loginRequest.username,
+            email: loginRequest.email,
             password: loginRequest.password,
             on: req.db
         )
