@@ -8,14 +8,12 @@ let package = Package(
         .library(name: "Presentation", targets: ["Presentation"])
     ],
     dependencies: [
-        .package(path: "../Domain"),
         .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.17.1")
     ],
     targets: [
         .target(
             name: "Presentation",
             dependencies: [
-                "Domain",
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
             ],
             path: "Sources"
