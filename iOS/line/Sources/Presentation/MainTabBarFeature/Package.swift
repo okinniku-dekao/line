@@ -13,6 +13,10 @@ let package = Package(
             url: "https://github.com/pointfreeco/swift-composable-architecture",
             from: "1.17.1"
         ),
+        .package(path: "../HomeFeature"),
+        .package(path: "../TalkFeature"),
+        .package(path: "../NewsFeature"),
+        .package(path: "../WalletFeature"),
     ],
     targets: [
         .target(
@@ -22,6 +26,10 @@ let package = Package(
                     name: "ComposableArchitecture",
                     package: "swift-composable-architecture"
                 ),
+                "HomeFeature",
+                "TalkFeature",
+                "NewsFeature",
+                "WalletFeature"
             ]
         ),
         .testTarget(

@@ -3,23 +3,30 @@
 import PackageDescription
 
 let package = Package(
-    name: "Home",
+    name: "HomeFeature",
     platforms: [.iOS(.v17)],
     products: [
-        .library(name: "Home", targets: ["Home"]),
+        .library(name: "HomeFeature", targets: ["HomeFeature"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.17.1")
+        .package(
+            url: "https://github.com/pointfreeco/swift-composable-architecture",
+            from: "1.17.1"
+        ),
     ],
     targets: [
         .target(
-            name: "Home",
+            name: "HomeFeature",
             dependencies: [
-                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
-            ]),
+                .product(
+                    name: "ComposableArchitecture",
+                    package: "swift-composable-architecture"
+                ),
+            ]
+        ),
         .testTarget(
-            name: "HomeTests",
-            dependencies: ["Home"]
+            name: "HomeFeatureTests",
+            dependencies: ["HomeFeature"]
         ),
     ]
 )

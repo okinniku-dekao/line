@@ -6,6 +6,10 @@
 //
 
 import ComposableArchitecture
+import HomeFeature
+import TalkFeature
+import NewsFeature
+import WalletFeature
 
 @Reducer
 public struct MainTabBarFeature {
@@ -18,6 +22,18 @@ public struct MainTabBarFeature {
             default:
                 return .none
             }
+        }
+        Scope(state: \.homeTopState, action: \.homeTopAction) {
+            HomeTopFeature()
+        }
+        Scope(state: \.talkTopState, action: \.talkTopAction) {
+            TalkTopFeature()
+        }
+        Scope(state: \.newsTopState, action: \.newsTopAction) {
+            NewsTopFeature()
+        }
+        Scope(state: \.walletTopState, action: \.walletTopAction) {
+            WalletTopFeature()
         }
     }
 }
