@@ -1,9 +1,9 @@
-// swift-tools-version:5.7
+// swift-tools-version:6.0
 import PackageDescription
 
 let package = Package(
     name: "Presentation",
-    platforms: [.iOS(.v14)],
+    platforms: [.iOS(.v17)],
     products: [
         .library(name: "Presentation", targets: ["Presentation"])
     ],
@@ -18,12 +18,13 @@ let package = Package(
                 "Domain",
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
             ],
-            path: "Sources/Presentation"
+            path: "Sources"
         ),
         .testTarget(
             name: "PresentationTests",
             dependencies: ["Presentation"],
             path: "Tests/PresentationTests"
         )
-    ]
+    ],
+    swiftLanguageModes: [.v6]
 )
