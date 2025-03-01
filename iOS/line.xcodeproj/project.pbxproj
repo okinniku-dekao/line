@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		865CB9E52D582FE0008DDBC8 /* Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = 865CB9E42D582FE0008DDBC8 /* Presentation */; };
+		8617ED952D735EA300D40D0E /* AppRootFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 8617ED942D735EA300D40D0E /* AppRootFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +37,12 @@
 		8617ED662D73583300D40D0E /* Exceptions for "line" folder in "line" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Sources/Features/Home,
-				Sources/Features/News,
-				Sources/Features/Talk,
-				Sources/Features/Wallet,
+				Sources/Presentation/AppRootFeature,
+				Sources/Presentation/HomeFeature,
+				Sources/Presentation/MainTabBarFeature,
+				Sources/Presentation/NewsFeature,
+				Sources/Presentation/TalkFeature,
+				Sources/Presentation/WalletFeature,
 			);
 			target = 864A07C22D5659E600ECB60E /* line */;
 		};
@@ -72,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				865CB9E52D582FE0008DDBC8 /* Presentation in Frameworks */,
+				8617ED952D735EA300D40D0E /* AppRootFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +144,7 @@
 			);
 			name = line;
 			packageProductDependencies = (
-				865CB9E42D582FE0008DDBC8 /* Presentation */,
+				8617ED942D735EA300D40D0E /* AppRootFeature */,
 			);
 			productName = line;
 			productReference = 864A07C32D5659E600ECB60E /* line.app */;
@@ -651,9 +653,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		865CB9E42D582FE0008DDBC8 /* Presentation */ = {
+		8617ED942D735EA300D40D0E /* AppRootFeature */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Presentation;
+			productName = AppRootFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

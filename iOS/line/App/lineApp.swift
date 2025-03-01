@@ -1,5 +1,5 @@
 import SwiftUI
-import Presentation
+import AppRootFeature
 
 @main
 struct lineApp: App {
