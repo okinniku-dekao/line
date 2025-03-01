@@ -8,7 +8,7 @@
 
 import SwiftUI
 import ComposableArchitecture
-import Presentation
+import AppRootFeature
 
 final class AppDelegate: NSObject, UIApplicationDelegate {
     let store = Store(initialState: AppRootFeature.State()) {

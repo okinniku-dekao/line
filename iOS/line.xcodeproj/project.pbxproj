@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		865CB9E52D582FE0008DDBC8 /* Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = 865CB9E42D582FE0008DDBC8 /* Presentation */; };
+		8617ED952D735EA300D40D0E /* AppRootFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 8617ED942D735EA300D40D0E /* AppRootFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +33,27 @@
 		864A07DE2D5659E800ECB60E /* lineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8617ED662D73583300D40D0E /* Exceptions for "line" folder in "line" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Sources/Presentation/AppRootFeature,
+				Sources/Presentation/HomeFeature,
+				Sources/Presentation/MainTabBarFeature,
+				Sources/Presentation/NewsFeature,
+				Sources/Presentation/TalkFeature,
+				Sources/Presentation/WalletFeature,
+			);
+			target = 864A07C22D5659E600ECB60E /* line */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		864A07C52D5659E600ECB60E /* line */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8617ED662D73583300D40D0E /* Exceptions for "line" folder in "line" target */,
+			);
 			path = line;
 			sourceTree = "<group>";
 		};
@@ -56,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				865CB9E52D582FE0008DDBC8 /* Presentation in Frameworks */,
+				8617ED952D735EA300D40D0E /* AppRootFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +144,7 @@
 			);
 			name = line;
 			packageProductDependencies = (
-				865CB9E42D582FE0008DDBC8 /* Presentation */,
+				8617ED942D735EA300D40D0E /* AppRootFeature */,
 			);
 			productName = line;
 			productReference = 864A07C32D5659E600ECB60E /* line.app */;
@@ -455,7 +473,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 6.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -497,7 +515,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 6.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -635,9 +653,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		865CB9E42D582FE0008DDBC8 /* Presentation */ = {
+		8617ED942D735EA300D40D0E /* AppRootFeature */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Presentation;
+			productName = AppRootFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
