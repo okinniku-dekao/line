@@ -8,8 +8,8 @@
 import ComposableArchitecture
 
 @Reducer
-struct MainTabBarFeature {
-    var body: some ReducerOf<Self> {
+public struct MainTabBarFeature {
+    public var body: some ReducerOf<Self> {
         BindingReducer()
         Reduce { state, action in
             switch action {

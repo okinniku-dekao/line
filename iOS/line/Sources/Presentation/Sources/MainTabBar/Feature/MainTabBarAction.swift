@@ -8,7 +8,7 @@
 import ComposableArchitecture
 
 extension MainTabBarFeature {
-    enum Action: Equatable, BindableAction {
+    public enum Action: Equatable, BindableAction {
         case binding(BindingAction<State>)
     }
 }

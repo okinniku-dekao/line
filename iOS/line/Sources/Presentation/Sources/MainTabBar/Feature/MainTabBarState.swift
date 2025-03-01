@@ -9,7 +9,7 @@ import ComposableArchitecture
 
 extension MainTabBarFeature {
     @ObservableState
-    struct State: Equatable {
+    public struct State: Equatable {
         var currentTab: AppTab = .home
     }
 }
