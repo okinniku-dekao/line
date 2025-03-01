@@ -33,9 +33,25 @@
 		864A07DE2D5659E800ECB60E /* lineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8617ED662D73583300D40D0E /* Exceptions for "line" folder in "line" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Sources/Features/Home,
+				Sources/Features/News,
+				Sources/Features/Talk,
+				Sources/Features/Wallet,
+			);
+			target = 864A07C22D5659E600ECB60E /* line */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		864A07C52D5659E600ECB60E /* line */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8617ED662D73583300D40D0E /* Exceptions for "line" folder in "line" target */,
+			);
 			path = line;
 			sourceTree = "<group>";
 		};
