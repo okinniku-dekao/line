@@ -7,6 +7,10 @@
 
 import SwiftUI
 import ComposableArchitecture
+import HomeFeature
+import TalkFeature
+import NewsFeature
+import WalletFeature
 
 public struct MainTabBarView: View {
     public init(store: StoreOf<MainTabBarFeature>) {
@@ -17,14 +21,30 @@ public struct MainTabBarView: View {
 
     public var body: some View {
         TabView(selection: $store.currentTab) {
-            ForEach(AppTab.allCases, id: \.rawValue) { tab in
-                Text(tab.rawValue)
-                    .tabItem {
-                        tab.image
-                        Text(tab.rawValue)
-                    }
-                    .tag(tab)
-            }
+            HomeTopView(store: store.scope(state: \.homeTopState, action: \.homeTopAction))
+                .tabItem {
+                    AppTab.home.image
+                    Text(AppTab.home.rawValue)
+                }
+                .tag(AppTab.home)
+            TalkTopView(store: store.scope(state: \.talkTopState, action: \.talkTopAction))
+                .tabItem {
+                    AppTab.talk.image
+                    Text(AppTab.talk.rawValue)
+                }
+                .tag(AppTab.talk)
+            NewsTopView(store: store.scope(state: \.newsTopState, action: \.newsTopAction))
+                .tabItem {
+                    AppTab.news.image
+                    Text(AppTab.news.rawValue)
+                }
+                .tag(AppTab.news)
+            WalletTopView(store: store.scope(state: \.walletTopState, action: \.walletTopAction))
+                .tabItem {
+                    AppTab.wallet.image
+                    Text(AppTab.wallet.rawValue)
+                }
+                .tag(AppTab.wallet)
         }
     }
 }
