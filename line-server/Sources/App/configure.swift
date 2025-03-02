@@ -20,12 +20,7 @@ public func configure(_ app: Application) async throws {
     app.migrations.add(CreateNews())
     app.migrations.add(CreateWallet())
     app.migrations.add(CreateTransaction())
-    
-    // 開発環境では常にマイグレーションをリセット（注意：本番環境では使用しないこと）
-    if app.environment == .development {
-        try await app.autoRevert()
-    }
-    
+ 
     try await app.autoMigrate()
     
     // コマンド
