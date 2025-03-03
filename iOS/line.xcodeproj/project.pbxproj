@@ -37,10 +37,6 @@
 		8617ED662D73583300D40D0E /* Exceptions for "line" folder in "line" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Sources/Features/Home/.swiftpm/xcode/xcuserdata/hideto1198.xcuserdatad/xcschemes/xcschememanagement.plist,
-				Sources/Features/News/.swiftpm/xcode/xcuserdata/hideto1198.xcuserdatad/xcschemes/xcschememanagement.plist,
-				Sources/Features/Talk/.swiftpm/xcode/xcuserdata/hideto1198.xcuserdatad/xcschemes/xcschememanagement.plist,
-				Sources/Features/Wallet/.swiftpm/xcode/xcuserdata/hideto1198.xcuserdatad/xcschemes/xcschememanagement.plist,
 				Sources/Presentation/.swiftpm/xcode/xcuserdata/hideto1198.xcuserdatad/xcschemes/xcschememanagement.plist,
 				Sources/Presentation/AppRootFeature,
 				Sources/Presentation/HomeFeature,
