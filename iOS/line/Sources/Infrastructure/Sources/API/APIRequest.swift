@@ -21,7 +21,7 @@ protocol APIRequest {
 
 extension APIRequest {
     var baseURL: String {
-        return "https://localhost:8080"
+        return "http://127.0.0.1:8080/"
     }
     
     var headers: [String: String]? {
