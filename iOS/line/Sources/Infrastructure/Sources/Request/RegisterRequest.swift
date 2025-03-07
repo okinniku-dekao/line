@@ -8,12 +8,13 @@
 struct RegisterRequest: APIRequest {
     typealias Response = AuthResponse
 
-    var path: String = "api/auth/register"
+    var path: APIPath
     var method: HTTPMethod = .post
     var queryParameters: [String : String]? = nil
     var bodyParameters: (any Encodable)?
     
-    init(userCreate: UserCreateDTO) {
+    init(userCreate: UserCreateDTO) throws {
         self.bodyParameters = userCreate
+        self.path = try .init(value: "api/auth/register")
     }
 }

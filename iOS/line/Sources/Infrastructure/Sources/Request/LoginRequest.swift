@@ -10,12 +10,13 @@ import Foundation
 struct LoginRequest: APIRequest {
     typealias Response = AuthResponse
 
-    var path: String = "api/auth/login"
+    var path: APIPath
     var method: HTTPMethod = .post
     var queryParameters: [String : String]? = nil
     var bodyParameters: (any Encodable)?
     
-    init(loginRequestDTO: LoginRequestDTO) {
+    init(loginRequestDTO: LoginRequestDTO) throws {
         self.bodyParameters = loginRequestDTO
+        self.path = try .init(value: "api/auth/login")
     }
 }
