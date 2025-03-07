@@ -7,12 +7,10 @@
 
 import Foundation
 
-// APIRequestから呼べるようにデフォルト実装とする
-extension APIRequest {
-    // リクエスト実行メソッド
-    func execute() async throws(NetworkError) -> Response {
+enum APIClient {
+    static func execute<T: APIRequest>(_ request: T) async throws(NetworkError) -> T.Response {
         let session = URLSession.shared
-        let request = try buildRequest()
+        let request = try request.buildRequest()
         
         do {
             let (data, response) = try await session.data(for: request)
@@ -27,7 +25,7 @@ extension APIRequest {
             case 200...299:
                 // 成功
                 do {
-                    return try JSONDecoder().decode(Response.self, from: data)
+                    return try JSONDecoder().decode(T.Response.self, from: data)
                 } catch {
                     throw NetworkError.decodingFailed(error)
                 }
@@ -38,6 +36,8 @@ extension APIRequest {
             }
         } catch let error as NetworkError {
             throw error
+        } catch is CancellationError {
+            throw NetworkError.cancelled
         } catch {
             throw NetworkError.requestFailed(error)
         }
