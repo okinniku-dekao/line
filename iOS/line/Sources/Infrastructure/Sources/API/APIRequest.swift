@@ -10,8 +10,8 @@ import Foundation
 protocol APIRequest {
     associatedtype Response: Decodable
     
-    var baseURL: String { get }
-    var path: String { get }
+    var baseURL: BaseURL { get }
+    var path: APIPath { get }
     var method: HTTPMethod { get }
     var headers: [String: String]? { get }
     var queryParameters: [String: String]? { get }
@@ -20,21 +20,21 @@ protocol APIRequest {
 }
 
 extension APIRequest {
-    var baseURL: String {
-        return "http://127.0.0.1:8080/"
+    var baseURL: BaseURL {
+        try! BaseURL(value: "http://127.0.0.1:8080/")
     }
     
     var headers: [String: String]? {
-        return ["Content-Type": "application/json"]
+        ["Content-Type": "application/json"]
     }
     
     var timeoutInterval: TimeInterval {
-        return 30.0
+        30.0
     }
     
     // URLの構築メソッド
-    private func buildURL() throws(NetworkError) -> URL {
-        var urlComponents = URLComponents(string: baseURL + path)
+    func buildURL() throws(NetworkError) -> URL {
+        var urlComponents = URLComponents(string: baseURL.value + path.value)
         
         // クエリパラメータの追加
         if let queryParameters = queryParameters, !queryParameters.isEmpty {
