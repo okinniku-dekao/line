@@ -21,5 +21,6 @@ let package = Package(
             dependencies: ["Infrastructure"],
             path: "Tests/InfrastructureTests"
         )
-    ]
+    ],
+    swiftLanguageModes: [.v6]
 )
