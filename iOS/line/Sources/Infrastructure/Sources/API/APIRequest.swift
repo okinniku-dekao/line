@@ -25,11 +25,11 @@ extension APIRequest {
     }
     
     var headers: [String: String]? {
-        return ["Content-Type": "application/json"]
+        ["Content-Type": "application/json"]
     }
     
     var timeoutInterval: TimeInterval {
-        return 30.0
+        30.0
     }
     
     // URLの構築メソッド
