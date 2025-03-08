@@ -12,7 +12,8 @@ let package = Package(
         .package(
             url: "https://github.com/pointfreeco/swift-composable-architecture",
             from: "1.17.1"
-        )
+        ),
+        .package(path: "../Resources")
     ],
     targets: [
         .target(
@@ -21,7 +22,8 @@ let package = Package(
                 .product(
                     name: "ComposableArchitecture",
                     package: "swift-composable-architecture"
-                )
+                ),
+                "Resources"
             ]
         ),
         .testTarget(

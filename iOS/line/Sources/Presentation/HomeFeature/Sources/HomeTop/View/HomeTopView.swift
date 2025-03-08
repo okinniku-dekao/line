@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
+import Resources
 
 public struct HomeTopView: View {
     public init(store: StoreOf<HomeTopFeature>) {
@@ -18,6 +19,10 @@ public struct HomeTopView: View {
     public var body: some View {
         VStack {
             Text("HomeTopView")
+            Image(R.image.chiikawa)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
         }
     }
 }
