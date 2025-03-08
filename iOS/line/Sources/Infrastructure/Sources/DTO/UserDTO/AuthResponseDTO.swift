@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AuthResponse: Codable {
+struct AuthResponseDTO: Codable {
     let user: UserDTO
     let message: String
 }

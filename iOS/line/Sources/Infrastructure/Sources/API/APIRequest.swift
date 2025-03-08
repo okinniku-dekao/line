@@ -17,6 +17,8 @@ protocol APIRequest {
     var queryParameters: [String: String]? { get }
     var bodyParameters: Encodable? { get }
     var timeoutInterval: TimeInterval { get }
+    
+    func callAsFunction() async throws -> Response
 }
 
 extension APIRequest {
@@ -72,5 +74,9 @@ extension APIRequest {
         }
         
         return request
+    }
+    
+    func callAsFunction() async throws(NetworkError) -> Response {
+        try await APIClient.execute(self)
     }
 }
