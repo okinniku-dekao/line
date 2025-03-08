@@ -36,5 +36,6 @@ let package = Package(
             name: "MainTabBarFeatureTests",
             dependencies: ["MainTabBarFeature"]
         ),
-    ]
+    ],
+    swiftLanguageModes: [.v6]
 )

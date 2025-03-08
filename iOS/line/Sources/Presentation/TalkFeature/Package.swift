@@ -28,5 +28,6 @@ let package = Package(
             name: "TalkFeatureTests",
             dependencies: ["TalkFeature"]
         ),
-    ]
+    ],
+    swiftLanguageModes: [.v6]
 )
