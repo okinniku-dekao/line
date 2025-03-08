@@ -42,7 +42,6 @@
 				Sources/Presentation/HomeFeature,
 				Sources/Presentation/MainTabBarFeature,
 				Sources/Presentation/NewsFeature,
-				Sources/Presentation/SharedResources,
 				Sources/Presentation/TalkFeature,
 				Sources/Presentation/WalletFeature,
 			);
