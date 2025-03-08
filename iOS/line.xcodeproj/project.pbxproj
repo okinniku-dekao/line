@@ -31,7 +31,6 @@
 		864A07C32D5659E600ECB60E /* line.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = line.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		864A07D42D5659E800ECB60E /* lineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		864A07DE2D5659E800ECB60E /* lineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		86ADC2DA2D7C08A300BD9E4C /* line.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = line.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,6 +45,13 @@
 				Sources/Presentation/SharedResources,
 				Sources/Presentation/TalkFeature,
 				Sources/Presentation/WalletFeature,
+			);
+			target = 864A07C22D5659E600ECB60E /* line */;
+		};
+		86ADC27B2D7C07AC00BD9E4C /* Exceptions for "TestPlans" folder in "line" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				line.xctestplan,
 			);
 			target = 864A07C22D5659E600ECB60E /* line */;
 		};
@@ -72,6 +78,9 @@
 		};
 		86ADC27A2D7C07A500BD9E4C /* TestPlans */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				86ADC27B2D7C07AC00BD9E4C /* Exceptions for "TestPlans" folder in "line" target */,
+			);
 			path = TestPlans;
 			sourceTree = "<group>";
 		};
@@ -112,7 +121,6 @@
 				864A07E12D5659E800ECB60E /* lineUITests */,
 				865CB9DA2D582C85008DDBC8 /* Frameworks */,
 				864A07C42D5659E600ECB60E /* Products */,
-				86ADC2DA2D7C08A300BD9E4C /* line.xctestplan */,
 			);
 			sourceTree = "<group>";
 		};
