@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "Domain",
-    platforms: [.iOS(.v14)],
+    platforms: [.iOS(.v17)],
     products: [
         .library(name: "Domain", targets: ["Domain"])
     ],
@@ -19,5 +19,6 @@ let package = Package(
             dependencies: ["Domain"],
             path: "Tests/DomainTests"
         )
-    ]
+    ],
+    swiftLanguageModes: [.v6]
 )
