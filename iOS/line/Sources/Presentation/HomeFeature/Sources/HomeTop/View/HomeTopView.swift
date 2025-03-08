@@ -7,7 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
-import SharedResources
+import Resources
 
 public struct HomeTopView: View {
     public init(store: StoreOf<HomeTopFeature>) {
@@ -21,7 +21,7 @@ public struct HomeTopView: View {
             Text("HomeTopView")
             Image(R.image.chiikawa)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .scaledToFit()
                 .frame(width: 100, height: 100)
         }
     }
