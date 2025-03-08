@@ -48,6 +48,13 @@
 			);
 			target = 864A07C22D5659E600ECB60E /* line */;
 		};
+		86ADC27B2D7C07AC00BD9E4C /* Exceptions for "TestPlans" folder in "line" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				line.xctestplan,
+			);
+			target = 864A07C22D5659E600ECB60E /* line */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -67,6 +74,14 @@
 		864A07E12D5659E800ECB60E /* lineUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = lineUITests;
+			sourceTree = "<group>";
+		};
+		86ADC27A2D7C07A500BD9E4C /* TestPlans */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				86ADC27B2D7C07AC00BD9E4C /* Exceptions for "TestPlans" folder in "line" target */,
+			);
+			path = TestPlans;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -100,6 +115,7 @@
 		864A07BA2D5659E600ECB60E = {
 			isa = PBXGroup;
 			children = (
+				86ADC27A2D7C07A500BD9E4C /* TestPlans */,
 				864A07C52D5659E600ECB60E /* line */,
 				864A07D72D5659E800ECB60E /* lineTests */,
 				864A07E12D5659E800ECB60E /* lineUITests */,
@@ -143,6 +159,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				864A07C52D5659E600ECB60E /* line */,
+				86ADC27A2D7C07A500BD9E4C /* TestPlans */,
 			);
 			name = line;
 			packageProductDependencies = (

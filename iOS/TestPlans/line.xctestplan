@@ -1,0 +1,107 @@
+{
+  "configurations" : [
+    {
+      "id" : "CEFE5A9D-6E77-4874-83C6-4BCD7D491226",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:line.xcodeproj",
+      "identifier" : "864A07C22D5659E600ECB60E",
+      "name" : "line"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:line\/Sources\/Presentation\/TalkFeature",
+        "identifier" : "TalkFeatureTests",
+        "name" : "TalkFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:line\/Sources\/Presentation\/MainTabBarFeature",
+        "identifier" : "MainTabBarFeatureTests",
+        "name" : "MainTabBarFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:line\/Sources\/Domain",
+        "identifier" : "DomainTests",
+        "name" : "DomainTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:line.xcodeproj",
+        "identifier" : "864A07D32D5659E800ECB60E",
+        "name" : "lineTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:line\/Sources\/Presentation\/HomeFeature",
+        "identifier" : "HomeFeatureTests",
+        "name" : "HomeFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:line\/Sources\/Infrastructure",
+        "identifier" : "InfrastructureTests",
+        "name" : "InfrastructureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:line\/Sources\/Presentation\/SharedResources",
+        "identifier" : "SharedResourcesTests",
+        "name" : "SharedResourcesTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:line\/Sources\/Presentation\/AppRootFeature",
+        "identifier" : "AppRootFeatureTests",
+        "name" : "AppRootFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:line\/Sources\/Application",
+        "identifier" : "ApplicationTests",
+        "name" : "ApplicationTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:line\/Sources\/Presentation\/WalletFeature",
+        "identifier" : "WalletFeatureTests",
+        "name" : "WalletFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:line\/Sources\/Presentation\/NewsFeature",
+        "identifier" : "NewsFeatureTests",
+        "name" : "NewsFeatureTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:line.xcodeproj",
+        "identifier" : "864A07DD2D5659E800ECB60E",
+        "name" : "lineUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
