@@ -44,6 +44,7 @@
 				Sources/Presentation/NewsFeature,
 				Sources/Presentation/TalkFeature,
 				Sources/Presentation/WalletFeature,
+				Sources/Resources,
 			);
 			target = 864A07C22D5659E600ECB60E /* line */;
 		};
