@@ -29,5 +29,6 @@ let package = Package(
             name: "SharedResourcesTests",
             dependencies: ["SharedResources"]
         ),
-    ]
+    ],
+    swiftLanguageModes: [.v6]
 )

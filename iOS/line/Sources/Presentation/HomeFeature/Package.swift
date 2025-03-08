@@ -30,5 +30,6 @@ let package = Package(
             name: "HomeFeatureTests",
             dependencies: ["HomeFeature"]
         ),
-    ]
+    ],
+    swiftLanguageModes: [.v6]
 )

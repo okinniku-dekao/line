@@ -28,5 +28,6 @@ let package = Package(
             name: "NewsFeatureTests",
             dependencies: ["NewsFeature"]
         ),
-    ]
+    ],
+    swiftLanguageModes: [.v6]
 )

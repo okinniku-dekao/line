@@ -30,5 +30,6 @@ let package = Package(
             name: "AppRootFeatureTests",
             dependencies: ["AppRootFeature"]
         ),
-    ]
+    ],
+    swiftLanguageModes: [.v6]
 )

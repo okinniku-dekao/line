@@ -28,6 +28,7 @@ let package = Package(
             name: "WalletFeatureTests",
             dependencies: ["WalletFeature"]
         ),
-    ]
+    ],
+    swiftLanguageModes: [.v6]
 )
 

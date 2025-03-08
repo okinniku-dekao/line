@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "Application",
-    platforms: [.iOS(.v14)],
+    platforms: [.iOS(.v17)],
     products: [
         .library(name: "Application", targets: ["Application"])
     ],
@@ -21,5 +21,6 @@ let package = Package(
             dependencies: ["Application"],  
             path: "Tests/ApplicationTests"
         )
-    ]
+    ],
+    swiftLanguageModes: [.v6]
 )
