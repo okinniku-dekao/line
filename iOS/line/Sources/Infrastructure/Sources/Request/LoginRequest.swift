@@ -8,7 +8,7 @@
 import Foundation
 
 struct LoginRequest: APIRequest {
-    typealias Response = AuthResponse
+    typealias Response = AuthResponseDTO
 
     var path: APIPath
     var method: HTTPMethod = .post
