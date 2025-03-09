@@ -19,6 +19,7 @@ public struct HomeTopView: View {
     public var body: some View {
         VStack {
             Text("HomeTopView")
+            Text(R.string.localizable.chiikawa)
             Image(R.image.chiikawa)
                 .resizable()
                 .scaledToFit()
