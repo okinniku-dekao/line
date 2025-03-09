@@ -7,3 +7,16 @@
 */
 
 "chiikawa" = "ちいかわ";
+// MARK: - ホーム
+"input_status_message" = "ステータスメッセージを入力";
+"search" = "検索";
+"friend_list" = "友だちリスト";
+"see_all" = "すべて見る";
+"favorite_friends" = "お気に入り";
+"friends" = "友だち";
+"groups" = "グループ";
+"service" = "サービス";
+"stamp" = "スタンプ";
+"dress_up" = "着せ替え";
+"line_gift" = "LINEギフト";
+"game" = "ゲーム";
