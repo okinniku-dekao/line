@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Resources
 
 enum AppTab: String, CaseIterable {
     case home = "ホーム"
@@ -16,16 +17,16 @@ enum AppTab: String, CaseIterable {
     var image: Image {
         switch self {
         case .home:
-            return Image(systemName: "house")
+            return Image(R.image.house)
             
         case .talk:
-            return Image(systemName: "message")
+            return Image(R.image.bookmark)
             
         case .news:
-            return Image(systemName: "newspaper")
+            return Image(R.image.newspaper)
             
         case .wallet:
-            return Image(systemName: "wallet.bifold")
+            return Image(R.image.walletBifold)
             
         }
     }

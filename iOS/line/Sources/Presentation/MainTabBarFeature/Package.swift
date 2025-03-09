@@ -17,6 +17,7 @@ let package = Package(
         .package(path: "../TalkFeature"),
         .package(path: "../NewsFeature"),
         .package(path: "../WalletFeature"),
+        .package(path: "../Resources")
     ],
     targets: [
         .target(
@@ -29,7 +30,8 @@ let package = Package(
                 "HomeFeature",
                 "TalkFeature",
                 "NewsFeature",
-                "WalletFeature"
+                "WalletFeature",
+                "Resources"
             ]
         ),
         .testTarget(
