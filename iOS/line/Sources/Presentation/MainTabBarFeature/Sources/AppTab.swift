@@ -14,20 +14,40 @@ enum AppTab: String, CaseIterable {
     case news = "ニュース"
     case wallet = "ウォレット"
     
-    var image: Image {
+    private var unselectedImage: Resources.ImageResource {
         switch self {
         case .home:
-            return Image(R.image.house)
+            return R.image.house
             
         case .talk:
-            return Image(R.image.bookmark)
+            return R.image.message
             
         case .news:
-            return Image(R.image.newspaper)
+            return R.image.newspaper
             
         case .wallet:
-            return Image(R.image.walletBifold)
+            return R.image.walletBifold
             
         }
+    }
+    
+    private var selectedImage: Resources.ImageResource {
+        switch self {
+        case .home:
+            return R.image.houseFill
+            
+        case .talk:
+            return R.image.messageFill
+            
+        case .news:
+            return R.image.newspaperFill
+            
+        case .wallet:
+            return R.image.walletBifoldFill
+        }
+    }
+    
+    func getTabImage(currentTab: Self) -> Image {
+        Image(currentTab == self ? selectedImage : unselectedImage)
     }
 }
